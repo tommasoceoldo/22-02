@@ -17,7 +17,6 @@
           --text-light: #ffffff;      /* white for light-on-dark elements */
           --shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* slightly softer shadow */
           --transition: all 0.3s ease;
-
         }
 
         /* Stili base */
@@ -185,21 +184,6 @@
             overflow: hidden;
         }
 
-        .welcome-page::before {
-            content: "";
-            position: absolute;
-            width: 150%;
-            height: 150%;
-            background: url('images//home/ale/Scrivania/INFO PROJECT/images/cat-svgrepo-com.svg')repeat;
-            animation: float 20s linear infinite;
-            z-index: 0;
-        }
-
-        @keyframes float {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-
         .welcome-content {
             position: relative;
             z-index: 1;
@@ -249,23 +233,6 @@
             object-fit: cover;
         }
 
-        .cover-image::after {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px;
-            font-size: 0.9rem;
-            transform: translateY(100%);
-            transition: var(--transition);
-        }
-
-        .cover-image:hover::after {
-            transform: translateY(0);
-        }
-
         .enter-btn {
             display: inline-block;
             background: var(--primary-color);
@@ -301,8 +268,6 @@
             position: relative;
             overflow: hidden;
         }
-
-       
 
         .hero h1 {
             font-size: 3rem;
@@ -400,7 +365,7 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            cursor: pointer; /* Aggiunto per indicare che è cliccabile */
+            cursor: pointer;
             position: relative;
         }
 
@@ -409,7 +374,6 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Indicatore che la card è cliccabile */
         .book-card::after {
             content: "Clicca per i dettagli";
             position: absolute;
@@ -726,7 +690,7 @@
             <h1 class="welcome-title">22-02</h1>
             <p class="welcome-subtitle">L'Ombra dei Felini</p>
             <div class="cover-image" id="coverImage">
-                <img src="WhatsApp Image 2025-12-12 at 3.33.44 PM.jpeg" alt="Copertina della collana 22-02: Gatti Soprannaturali">
+                <img src="cover.jpg" alt="Copertina della collana 22-02: Gatti Soprannaturali">
             </div>
             <a href="#" class="enter-btn" id="enterBtn">Esplora la Collana <i class="fas fa-paw"></i></a>
         </div>
@@ -835,7 +799,6 @@
                             <p><i class="fas fa-envelope"></i> simone.baruffi.s@liceo-melzocassano.edu.it</p>
                         </div>
                     </div>
-                    <!-- Sezione "Seguici" rimossa come richiesto -->
                 </div>
                 <!-- Copyright aggiornato a 2025 -->
                 <div class="copyright">
@@ -940,7 +903,6 @@
                 authorText: "Gorenszach Alessandra, Ceoldo Tommaso, Baruffi Simone",
                 footerDesc: "Illustrazioni di A.Gorenszach",
                 contactTitle: "Contatti",
-                // FollowTitle rimosso come richiesto
                 charactersTitle: "Personaggi",
                 charactersSubtitle: "I felini straordinari del laboratorio 22-02",
                 backBtnText: "Torna alla Collana",
@@ -948,8 +910,8 @@
                     {
                         id: 1,
                         title: "L'origine",
-						author: "1",
-                        image: "WhatsApp Image 2025-12-12 at 3.33.54 PM.jpeg",
+                        author: "Collana 22-02",
+                        image: "book1.jpg",
                         summary: "Uno scienziato vive con la sua gatta Mandu da solo. Sapendo che il felino non potrà stare per sempre con lui, conduce studi per diversi anni con un obiettivo: rendere Mandu immortale. Tuttavia questi studi portano ad una scoperta ancora più grande...",
                         fullDescription: "La vita della gatta Mandu cambierà completamente, ottenendo una incredibile capacità soprannaturale, e si aggiungeranno anche altri due amici felini: Hoshi e Nilù, anch'essi con incredibili abilità.",
                         year: 2021,
@@ -958,8 +920,8 @@
                     {
                         id: 2,
                         title: "Il complotto",
-						author: "2",
-                        image: "WhatsApp Image 2025-12-12 at 3.34.04 PM.jpeg",
+                        author: "Collana 22-02",
+                        image: "book2.jpg",
                         summary: "La ditta di mangime per animali PucciPucci, la preferita dei tre gatti, sta per chiudere. I felini decidono quindi di trovare la CEO per convincerlo a cambiare idea... tuttavia, dietro alla chiusura dell'azienda, ci sono motivi ben più profondi e misteriosi...",
                         fullDescription: "Durante la loro missione, Mandu, Hoshi e Nilù scoprono un complotto che minaccia la CEO di PucciPucci, e decidono di fermarlo per salvarla.",
                         year: 2022,
@@ -968,8 +930,8 @@
                     {
                         id: 3,
                         title: "Epilogo",
-						author: "3",
-                        image: "WhatsApp Image 2025-12-12 at 3.34.10 PM.jpeg",
+                        author: "Collana 22-02",
+                        image: "book3.jpg",
                         summary: "Un'organizzazione criminale scopre dell'esistenza dei tre gatti soprannaturali dopo che il loro leader vede Nilù salvare un bambino che stava per essere investito da un camion...",
                         fullDescription: "L'intera organizzazione escogita un piano per rapire i tre gatti ma fallisce, e così prova a rapire lo scienziato.. tuttavia Mandu, Hoshi e Nilù lo difendono... Come andrà?",
                         year: 2023,
@@ -981,31 +943,30 @@
                         id: 1,
                         name: "Mandu",
                         role: "Vola fino a dove vuole, anche nello spazio!",
-                        image: "Screenshot_20251212_170827_ibisPaint X.jpg",
+                        image: "mandu.jpg",
                         description: "È un' adorabile gatta bianca, la prima modificata nel laboratorio 22-02, con la capacità di sollevarsi e volare fino ad altezze incredibili, raggiungendo anche lo spazio."
                     },
                     {
                         id: 2,
                         name: "Hoshi",
                         role: "Parla e legge nel pensiero!",
-                        image: "WhatsApp Image 2025-12-12 at 3.34.43 PM.jpeg",
+                        image: "hoshi.jpg",
                         description: "Un gatto simpatico e vivace, energetico e scherzoso, capace di parlare come un umano, e persino leggere nel pensiero! Nessuno può mentire davanti a lui."
                     },
                     {
                         id: 3,
                         name: "Nilù",
                         role: "Doti fisiche fuori dal normale!",
-                        image: "WhatsApp Image 2025-12-12 at 3.34.44 PM.jpeg",
+                        image: "nilu.jpg",
                         description: "È una gatta nera dal pelo lungo e soffice, riesce a sollevare fino a 1000x il suo peso, correre veloce quanto un ghepardo, e ha anche una incredibile resistenza... ma è anche la più piccolina fra i tre gatti."
-                    },
-
+                    }
                 ]
             },
             en: {
                 title: "22-02: The Shadow of Felines",
                 subtitle: "A book series that reveals the secret world of supernatural cats",
                 plotTitle: "Series Plot",
-                plotText1: "A scientist works and conducts research in his laboratory, called 22-02, for ten years with a precise goal: to make his cat’s life eternal. However, in the process, he doesn't only discover how to achieve this, but also manages to give the feline supernatural abilities. Delighted by his discovery, he decides to adopt two more cats, forming a trio of individuals with unique and extraordinary powers.",
+                plotText1: "A scientist works and conducts research in his laboratory, called 22-02, for ten years with a precise goal: to make his cat's life eternal. However, in the process, he doesn't only discover how to achieve this, but also manages to give the feline supernatural abilities. Delighted by his discovery, he decides to adopt two more cats, forming a trio of individuals with unique and extraordinary powers.",
                 plotText2: "The 22-02 series revolves around these three felines, who go through many fortunate and unfortunate events, fights with their abilities to overcome difficulties and achieve their goals, living incredible adventures.",
                 plotText3: "Each book reveals new secrets, new adventures and an immersive insight.",
                 booksTitle: "Books in the Series",
@@ -1014,7 +975,6 @@
                 authorText: "Gorenszach Alessandra, Ceoldo Tommaso, Baruffi Simone",
                 footerDesc: "illustrations by A.Gorenszach",
                 contactTitle: "Contacts",
-                // FollowTitle rimosso come richiesto
                 charactersTitle: "Characters",
                 charactersSubtitle: "The extraordinary felines of the 22-02 laboratory",
                 backBtnText: "Back to the Series",
@@ -1022,8 +982,8 @@
                   {
                       id: 1,
                       title: "The origin",
-					  author: "1",
-                      image: "WhatsApp Image 2025-12-12 at 3.33.54 PM.jpeg",
+                      author: "22-02 Series",
+                      image: "book1.jpg",
                       summary: "A scientist lives alone with his loved white cat Mandu. Knowing that the feline won't stay by his side forever, he conducts research for several years with one goal: making Mandu immortal. However, he will also make an even bigger discovery...",
                       fullDescription: "Mandu's life will change forever, obtaining supernatural powers, and two new cats will join her: Hoshi and Nilù, both with incredibile abilities as well.",
                       year: 2021,
@@ -1032,8 +992,8 @@
                   {
                       id: 2,
                       title: "The plot",
-                      author: "2",
-                      image: "WhatsApp Image 2025-12-12 at 3.34.04 PM.jpeg",
+                      author: "22-02 Series",
+                      image: "book2.jpg",
                       summary: "The three cats' favourite pet food company PucciPucci is about to close, so they decide to find the CEO and convince him not to close it... However, behind the closing of Pucci Pucci lays a misterious and deeper reason...",
                       fullDescription: "During their mission to find the owner of PucciPucci, Mandu, Hoshi and Nilù find out about a plot that threatens to hurt the CEO of the company, and they all decide to stop it.",
                       year: 2022,
@@ -1042,8 +1002,8 @@
                   {
                       id: 3,
                       title: "Epilogue",
-                      author: "3",
-                      image: "WhatsApp Image 2025-12-12 at 3.34.10 PM.jpeg",
+                      author: "22-02 Series",
+                      image: "book3.jpg",
                       summary: "A criminal organisation finds out about the three cats with supernatural powers after their leader sees Nilù saving a child who was about to get hit by a truck...",
                       fullDescription: "The whole organisation makes a plan to kidnap the cats but it fails, so they try to kidnap the scientist instead, but Mandu, Hoshi and Nilù defend him... how will it go?",
                       year: 2023,
@@ -1055,23 +1015,23 @@
                       id: 1,
                       name: "Mandu",
                       role: "She can fly wherever he wants, even in space!",
-                      image: "Screenshot_20251212_170827_ibisPaint X.jpg",
+                      image: "mandu.jpg",
                       description: "Mandu is an adorable white cat, the first one the scientist modified in the 22-02 lab. She has the ability to float and fly wherever she chooses to go, even in space."
                   },
                   {
                       id: 2,
                       name: "Hoshi",
                       role: "He can speak and read minds!",
-                      image: "WhatsApp Image 2025-12-12 at 3.34.43 PM.jpeg",
+                      image: "hoshi.jpg",
                       description: "Hoshi is a mischevious, energetic and witty, capable of speaking like a human and even reading anyone's mind! Nobody can lie in his presence."
                   },
                   {
                       id: 3,
                       name: "Nilù",
                       role: "She has incredible physical abilities!",
-                      image: "WhatsApp Image 2025-12-12 at 3.34.44 PM.jpeg",
+                      image: "nilu.jpg",
                       description: "Nilù is a black cat with soft, long fur. She can lift up to 1000x her bodyweight, she can run as fast as cheetah and she's also incredibly resistent... but also, the smallest out of the three cats."
-                  },
+                  }
                 ]
             }
         };
@@ -1215,7 +1175,7 @@
                 bookElement.setAttribute('data-book-id', book.id);
                 bookElement.innerHTML = `
                     <div class="book-image">
-                        <img src="${book.image}" alt="${book.title}">
+                        <img src="${book.image}" alt="${book.title}" onerror="this.src='placeholder.jpg'">
                     </div>
                     <div class="book-info">
                         <h3>${book.title}</h3>
@@ -1243,7 +1203,7 @@
                 characterElement.className = 'character-card';
                 characterElement.innerHTML = `
                     <div class="character-image">
-                        <img src="${character.image}" alt="${character.name}">
+                        <img src="${character.image}" alt="${character.name}" onerror="this.src='placeholder.jpg'">
                     </div>
                     <div class="character-info">
                         <h3>${character.name}</h3>
@@ -1271,7 +1231,7 @@
                 <p class="author" style="color: var(--secondary-color); font-style: italic; margin-bottom: 20px;">${book.author}</p>
                 <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
                     <div style="flex: 1; min-width: 250px;">
-                        <img src="${book.image}" alt="${book.title}" style="width: 100%; border-radius: 10px;">
+                        <img src="${book.image}" alt="${book.title}" style="width: 100%; border-radius: 10px;" onerror="this.src='placeholder.jpg'">
                     </div>
                     <div style="flex: 2; min-width: 250px;">
                         <h3 style="color: var(--primary-color); margin-bottom: 10px;">${synopsisText}</h3>
@@ -1336,7 +1296,6 @@
             document.getElementById('authorText').textContent = data.authorText;
             document.getElementById('footerDesc').textContent = data.footerDesc;
             document.getElementById('contactTitle').textContent = data.contactTitle;
-            // FollowTitle rimosso
 
             // Aggiorna titoli e testi della pagina personaggi
             document.getElementById('charactersMainTitle').textContent = data.charactersTitle;
